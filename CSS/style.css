@@ -1,0 +1,599 @@
+* {
+  box-sizing: border-box;  
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 44px;
+    max-width: 1200px;
+    margin: auto
+}; 
+.container{
+    /* рамка/размер/сплошная/цвет */
+    /* border: 1px solid rgb(255, 251, 251); */
+    /* максимальная ширина(согласно макета)*/
+    max-width: 1200px;
+    /* одинаковый отступ по краям (m:a) */
+    
+}
+.header{
+    /* выстраивание элементов в строку (d:f)*/
+    display: flex;
+    /* центрирует элементы по вертикали (aic)*/
+    align-items: center;
+    /* разнесение элементов по краям и центру (jcsb) */
+    justify-content: space-between;
+    /* отступ */
+    margin-bottom: 40px;
+    margin-top: 44px;
+}
+.input-adress{
+    height: 40px;
+    flex: 0.8; 
+    /* width: 690px; не подходит для адаптации*/
+    /* картинка в поле ввода */
+    background-image: url(../img/home.svg);
+}
+.input-search{
+    flex: 0.30;
+    height: 34px;
+    background-image: url(../img/search.svg);
+    margin-left: auto;
+}
+.input{
+    /* скругление углов */
+    border-radius: 2px;
+    border-color: #BFBFBF;
+    border: 1px solid #D9D9D9;
+    /* размер шрифта внутри поля */
+    font-size: 16px;
+    /* высота шрифта в поле */
+    line-height: 24px;
+    /* отступ слева внутри */
+    padding-left: 35px;
+    background-repeat: no-repeat;
+    background-position: left 11px center;
+}
+.buttons{
+    display:flex;
+    align-items: center;
+
+}
+.header-buttons1{
+    /* для выравнимания кнопок при использовании иконок и текста через HTML
+    display:flex;
+    align-items: center;
+     */
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.0015);
+    border-radius: 2px;
+    width: 113px;
+    height: 40px;
+    padding: 8px 16px;
+    color: #595959;
+    font-size: 16px;
+    line-height: 24px;
+    background-image: url(../img/shopping-cart.svg);
+    background-repeat: no-repeat;
+    background-position: left 16px center;
+    padding-left: 36px;
+
+}
+.header-buttons0{
+    background: #1890FF;
+    border-radius: 2px;
+    border: 1px solid #1890FF;
+    width: 96px;
+    height: 40px;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px 16px;
+    background-image: url(../img/human.svg);
+    background-repeat: no-repeat;
+    background-position: left 16px center;
+    padding-left: 36px;
+    margin-right: 10px;
+}
+.button-card-text{
+    margin-right: 10px;
+}
+/* .button-icon{ 
+    margin-right: 6px;
+    vertical-align: middle;
+}
+.button-text{
+    vertical-align: middle;
+}*/
+.main{
+    background: linear-gradient(180deg, rgba(245, 245, 245, 0) 1.04%, #F5F5F5 100%);
+}
+.promo{
+    box-shadow: (0px 7px 12px rgba(158, 158, 163, 0.1));
+    background: #FFF1B8 url(../img/promo_img2.jpeg) no-repeat top right /600px;
+    border-radius: 10px;
+    padding: 40px 68px;
+    max-height: 300px;
+    color: #302C34;
+    margin-bottom: 56px;
+}
+.promo-text{
+    max-width: 500px;
+    max-height: 300px;
+}
+.section-heading{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin-bottom: 44px;
+}
+.section-title{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    margin: 0;
+    margin-right: 30px;
+}
+.cards{
+    display: flex;
+    align-items: flex-start;
+    /* перенос, если наезжает друг на друга */
+    flex-wrap: wrap;
+    justify-content: space-between;    
+}
+.card{
+    background: white;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 7px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    /* изменения конейнера отностительно материского и соседства других элементов */
+    flex-basis: 32%;
+    text-decoration: none;
+}
+.card-image{
+    width: 384px;
+    height: 250px;
+    /* если будет вставлено изображение других размеров */
+    object-fit: cover;
+}
+.card-text{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 23px;
+    padding-left: 23px;
+}
+.card-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-title{
+    margin: 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 40px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.card-reg{
+    font-weight: normal;
+}
+.card-tag{
+    background: #262626;
+    background-size: 55px 22px;
+    border-radius: 2px;
+    color: #FFFFFF;
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    padding: 1px 8px;
+}
+.card-info{
+    align-items: center;
+    display: flex;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: wrap;
+    min-width: 150px;
+    padding-bottom: 24px;
+}
+.shop-button{
+    background: #1890FF;
+    border-radius: 2px;
+    border: 1px solid #1890FF;
+    width: 124px;
+    height: 40px;    
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px 16px;
+    background-image: url(../img/button-card-shopping-cart.svg);
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    margin-left: 24px;
+    margin-bottom: 30px;
+}
+.rating{
+    margin-left: 24px;
+    margin-right: 26px;
+    color: #FFC107;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 32px;
+    align-items: center;
+}
+.price, .category{
+    font-size: 18px;
+    line-height: 32px;
+    color: #8C8C8C;
+}
+.price{
+    margin-right: 10px;
+}
+.card-price-cart{
+    font-style: normal;
+    font-size: 20px;
+    line-height: 32px;
+    margin-left: 32px;
+}
+.card-buttons{
+    display: flex;
+    align-items: stretch;
+
+}
+.ingredients{
+    color: #8C8C8C;
+    font-size: 18px;
+    line-height: 21px;
+    font-style: normal;
+    padding-left: 22px;
+    padding-right: 22px;
+    max-width: 300px;
+}
+.category{
+    /* скрытие текста */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    min-width: 100px;
+}
+.price:after{
+    content: "";
+    width: 5px;
+    height: 5px;
+    background: #8C8C8C;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+.footer{
+    padding: 68px 0px;
+}
+.footer-block{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-nav{
+    margin-right: auto;
+    margin-left: 35px;
+}
+.footer-link{
+    display: inline-block;
+    color: #595959;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+}
+.footer-link:not(:last-child){
+    margin-right: 15px;
+}
+.social-links{
+    display: flex;
+    align-items: center;
+}
+.social-link:not(:last-child){
+    margin-right: 21px;
+}
+.modal{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    display: none;
+}
+.is-open{
+    display: flex;
+    }
+.modal-dialog{
+    max-width: 780px;
+    width: 95%;
+    background: #FFFFFF;
+    border-radius: 5px;
+    margin: auto;
+    padding: 40px 45px;
+}
+.modal-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 45px;
+}
+.modal-title{
+    margin: 0;
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: bold;
+}
+.close{
+    font-size: 36px;
+    border: none;
+    background: none;
+}
+.food-row{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #D9D9D9;
+    margin-bottom: 15px;
+}
+.food-name{
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 32px;
+}
+.food-counter{
+    display: flex;
+    align-items: center;
+}
+.food-price{
+    margin-left: auto;
+    margin-right: 47px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 32px;
+}
+.counter-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 39px;
+    height: 32px;
+    background: #FFFFFF;
+    border: 1px solid #40A9FF;
+    box-sizing: border-box;
+    border-radius: 2px;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: normal;
+    color: #40A9FF;
+}
+.counter{
+    margin-left: 12px;
+    margin-right: 12px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+}
+.modal-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 52px;
+}
+.modal-price{
+    background: #262626;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FAFAFA;
+    padding: 15px 20px;
+}
+.button-yes{
+    background: #1890FF;
+    border-radius: 2px;
+    border: 1px solid #1890FF;
+    min-width: 149px;
+    height: 40px;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px 16px;
+    margin-right: 18px;
+}
+.button-no{
+    width: 88px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    box-sizing: border-box;
+    border-radius: 2px;
+    color: #595959;
+    font-size: 16px;
+    line-height: 24px;
+}
+/* MEDIA ========================================================================= */
+/* адаптивность под разное разрешение */
+@media (max-width: 1366px) {
+    /* body{
+        background-color: red;
+    } проверка работы цветом*/
+.container{
+    max-width: 960px;
+    padding-left: 25px;;
+    }
+.promo{
+    background-position: center right;
+    background-size: 450px;
+    }
+.rating{
+    margin-right: 15px;
+    }
+.card-title{
+    font-size: 20px;
+    }
+}
+@media(max-width:992px){
+.container{
+    max-width: 750px;
+    align-items: center;
+    }
+.promo{
+    background-position: center right -230px;
+    background-size: 500px;
+    }
+.rating{
+    margin-right: 10px;
+    }
+.card-title{
+        font-size: 15px;
+    }
+.rating{
+    margin-left: 25px;
+    margin-right: 26px;
+    color: #FFC107;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+}
+.price, .category{
+    font-size: 14px;
+    line-height: 16px;
+    color: #8C8C8C;
+}
+.price{
+    margin-right: 7px;
+}
+.card-tag{
+    background: #262626;
+    background-size: 55px 22px;
+    border-radius: 2px;
+    color: #FFFFFF;
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 8px;
+    line-height: 17px;
+    padding: 1px 8px;
+}
+.card{
+    background: white;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 7px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    /* изменения конейнера отностительно материского и соседства других элементов */
+    flex-basis: 49%;
+}
+.card-text{
+    padding-top: 10px;
+    padding-bottom: 16px;
+    padding-right: 17px;
+    padding-left: 17px;
+}
+}
+@media(max-width: 578px){
+.container{
+        width: 400px;
+        margin: 0;
+        /* align-items: center; */
+    }
+.header{
+        flex-wrap: wrap;
+    }
+.input-adress{
+        margin-top: 15px;
+        order: 5;
+        flex: 1;
+    }
+.promo{
+    background-image: none;
+    margin-bottom: 10px;
+    padding: 20px 34px;
+    width: 100%;
+
+    }
+.title, .promo-text:not(:last-child){
+    margin: 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    text-overflow: ellipsis;
+    /* overflow: hidden; */
+    white-space: nowrap;
+    }
+.card{
+    background: white;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 7px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    /* изменения конейнера отностительно материского и соседства других элементов */
+    flex-basis: 100%;
+}
+.footer-nav{
+    order: 2;
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+}
+.footer-logo{
+    order: 0;
+    margin-right: 1x;
+}
+.cocial-links{
+    order: 1;
+}
+.footer-block{
+    align-items: stretch;
+    width: 400px;
+}
+.section-heading{
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 44px;
+}
+.section-title{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+    margin-right: 50px;
+}
+.footer{
+    max-width: 400px;
+}
+.header{
+        /* выстраивание элементов в строку (d:f)*/
+    display: flex;
+    /* центрирует элементы по вертикали (aic)*/
+    align-items: center;
+    /* разнесение элементов по краям и центру (jcsb) */
+    justify-content: space-between;
+    /* отступ */
+    margin-bottom: 40px;
+    margin-top: 44px;
+    max-width: 400px;
+}
+.cards{
+    max-width: auto;
+}
+}
